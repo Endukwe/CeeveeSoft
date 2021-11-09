@@ -1,0 +1,87 @@
+﻿@model CeeveeSoftWebProj.ViewModels.PortfolioViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Portfolio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data" method="post" class="align-content-center">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="h5 form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" /> 
+                <small class="text-danger"><i>*First letter in caps lock</i></small>
+                
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="h5 form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <small class="text-danger"><i>*First letter in caps lock</i></small>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="h5 form-group">
+
+                <label asp-for="Upload" class="control-label"> Upload Picture</label>
+                <input asp-for="Upload" type="file" />
+                <small class="text-danger"><i>*jpeg file format with size less than 2MB</i></small>
+                <span asp-validation-for="Upload" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="h5 form-group">
+
+                <label asp-for="CVfile" class=" control-label">Upload CV</label>
+                <input asp-for="CVfile" accept=".pdf" type="file" />
+                <small class="text-danger"><i>*PDF format</i></small>
+                <span asp-validation-for="CVfile" class="text-danger"></span>
+            </div>
+            <div class="h5 form-group">
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="h5 form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="h5 form-group">
+                <label asp-for="ProfessionalSummary" class="control-label"></label>
+                <!--   <input asp-for="ProfessionalSummary" class="form-control" type="text" /> -->
+                <textarea rows="4" cols="60" maxlength="350" asp-for="ProfessionalSummary" class="form-control"></textarea>
+                <span asp-validation-for="ProfessionalSummary" class="text-danger"></span>
+            </div>
+            <div class="h5 form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="h5 form-group">
+                <label asp-for="Proffesion" class="h4 control-label"></label>
+                <input asp-for="Proffesion" class="form-control" />
+                <small class="text-danger"><i>*For multiple career focus, seprate with commas. eg "Designer,Photographer,Web Developer"</i></small>
+                <span asp-validation-for="Proffesion" class="text-danger"></span>
+            </div>
+            <div class="h5 form-group">
+                <label asp-for="LinkdinHandle" class="control-label"></label>
+                <input asp-for="LinkdinHandle" class="form-control" />
+                <small class="text-danger"><i>*paste linkdin profile url</i></small>
+                <span asp-validation-for="LinkdinHandle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Continue" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

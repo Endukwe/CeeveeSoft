@@ -1,0 +1,33 @@
+﻿@model CeeveeSoftWebProj.Models.Skill
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Skill</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="SkillContent" class="control-label"> Skill Set</label>
+                <input asp-for="SkillContent" class="form-control" />
+                <small class="text-danger"><i>*The skills listed should be sepersted with commas eg: Javascript, C#, Azure, ASP.NET..... </i></small>
+                <span asp-validation-for="SkillContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Continue" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

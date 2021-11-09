@@ -1,0 +1,265 @@
+﻿@{
+    Layout = null;
+ }
+<!DOCTYPE html>
+@model CeeveeSoftWebProj.Models.Portfolio
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/aos.css?ver=1.1.0" rel="stylesheet">
+    <link href="~/css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
+    <link href="~/css/main.css?ver=1.1.0" rel="stylesheet">
+    <noscript>
+        <style type="text/css">
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+        </style>
+    </noscript>
+
+</head>
+<body>
+    <header>
+        <div class="profile-page sidebar-collapse">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+                <div class="container">
+                    <div class="navbar-translate">
+                        <a class="navbar-brand" href="#" rel="tooltip">Resume</a>
+                        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#Education">Education</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="page-content">
+        <div>
+            <div class="profile-page">
+                <div class="wrapper">
+                    <div class="page-header page-header-small" filter-color="green">
+                        <div class="" data-parallax="true" style="background-image: url('/wwwroot/Images/cc-bg-1.jpg')"></div>
+                        <div class="container">
+                            <div class="content-center">
+                                <div class="cc-profile-image"><a href="#"><img src="@ViewBag.Profilepics" alt="Image" /></a></div>
+                                <div class="h2 title">@Model.FullName</div>
+                                <p class="category text-white">@Model.Proffesion</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a><a asp-action="OnPostDownload" asp-route-id="@Model.Id" class="btn btn-primary"  data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="container">
+                                <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon btn-linkedin" href="@Model.LinkdinHandle" rel="tooltip" title="Follow me on LinkdIn"><i class="btn-linkedin "></i><svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+</svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="about">
+                <div class="container">
+                    <div class="card" data-aos="fade-up" data-aos-offset="10">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card-body">
+                                    <div class="h4 mt-0 title">About</div>
+                                    <p>Hello! I am @Model.FullName.</p>
+                                    <p> @Model.ProfessionalSummary</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card-body">
+                                    <div class="h4 mt-0 title">Basic Information</div>
+
+                                    <div class="row mt-3">
+                                        <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+                                        <div class="col-sm-8">@Model.EmailAddress</div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
+                                        <div class="col-sm-8">@Model.PhoneNumber</div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
+                                        <div class="col-sm-8">@Model.Address</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="skill">
+                <div class="container">
+                    <div class="h4 text-center mb-4 title">Professional Skills</div>
+                    <div class="card " style="height: 80px" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <div class="card-body " style="height: 10px">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="">
+                                        <span class="h5"> @Model.Skills.SkillContent</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="experience">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">Work Experience</div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body cc-experience-header">
+                                    <p>@Model.Experiences.Period</p>
+                                    <div class="h5">@Model.Experiences.Role</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <div class="h5">@Model.Experiences.Role | @Model.Experiences.Organization </div>
+                                    <p>@Model.Experiences.RoleFunction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="container cc-education">
+                    <div class="h4 text-center mb-4 title">Education</div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body cc-education-header">
+                                    <p>@Model.Educations.Date.ToString("MM/yyyy")</p>
+                                    <div class="h5">@Model.Educations.ClassOfDegree</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <div class="h5">@Model.Educations.ClassOfDegree  @Model.Educations.Course</div>
+                                    <p class="category">@Model.Educations.School</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="contact">
+                <div class="cc-contact-information" style="background-image: url('images/staticmap.png')">
+                    <div class="container">
+                        <div class="cc-contact">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="card mb-0" data-aos="zoom-in">
+                                        <div class="h4 text-center title">Contact Me</div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <form action="https://formspree.io/your@email.com" method="POST">
+                                                        <div class="p pb-3"><strong>Feel free to contact me </strong></div>
+                                                        <div class="row mb-3">
+                                                            <div class="col">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
+                                                                    <input class="form-control" type="text" name="name" placeholder="Name" required="required" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon"><i class="fa fa-file-text"></i></span>
+                                                                    <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                                                    <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <button class="btn btn-primary" type="submit">Send</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <p class="mb-0"><strong>Address </strong></p>
+                                                    <p class="pb-2">@Model.Address</p>
+                                                    <p class="mb-0"><strong>Phone</strong></p>
+                                                    <p class="pb-2">@Model.PhoneNumber</p>
+                                                    <p class="mb-0"><strong>Email</strong></p>
+                                                    <p>@Model.EmailAddress</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
+    <script src="~/js/core/popper.min.js?ver=1.1.0"></script>
+    <script src="~/js/core/bootstrap.min.js?ver=1.1.0"></script>
+    <script src="~/js/now-ui-kit.js?ver=1.1.0"></script>
+    <script src="~/js/aos.js?ver=1.1.0"></script>
+    <script src="~/js/main.js?ver=1.1.0"></script>
+    <script src="~/js/copylink.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿@model CeeveeSoftWebProj.Models.Portfolio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container-fluid bg-white">
+    <h1>Details</h1>
+
+    <div class="mx-auto card border-primary text-center bg-white text-dark" style="width:50rem">
+
+        <div class="row justify-content-center">
+            <div class="col">
+                <img src="@ViewBag.Profilepics" height="240" width="240" />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3>Name</h3>
+                    </header>
+                    <p>@Model.FullName</p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3>Email</h3>
+                    </header>
+                    <p>@Model.EmailAddress</p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3>Phone Number</h3>
+                    </header>
+                    <p>@Model.PhoneNumber</p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3>Address</h3>
+                    </header>
+                    <p>@Model.Address</p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3>Linkdin Profile</h3>
+                    </header>
+                    <p>@Model.LinkdinHandle</p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3>Summary</h3>
+                    </header>
+                    <p>@Model.ProfessionalSummary</p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3> Address</h3>
+                    </header>
+                    <p> @Model.Address</p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3> Education</h3>
+                    </header>
+                    <p>@Model.Educations.ClassOfDegree @Model.Educations.Course (@Model.Educations.Date.ToString("yyyy"))</p>
+                   
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3> Work Experience</h3>
+                    </header>
+                    <p>@Model.Experiences.Period</p>
+                    <p> @Model.Experiences.Role</p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <header>
+                        <h3> Skills</h3>
+                    </header>
+                    <p>@Model.Skills.SkillContent</p>
+
+                </section>
+            </div>
+        </div>
+        <div>
+            <a asp-action="edit" asp-route-id="@Model.Id" class="btn btn-primary" role="button"> Edit Portfolio</a>
+            <a asp-action="Index" asp-route-id="@Model.Id" class="btn btn-primary" role="button"> View Portfolio</a>
+        </div>
+        <br />
+        <div>
+            <input type="url" value="@ViewBag.url" id="myinput"/>
+            
+            <button onclick="myfunction" class="btn btn-primary" role="button">Copy your CV URL</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+    
+
