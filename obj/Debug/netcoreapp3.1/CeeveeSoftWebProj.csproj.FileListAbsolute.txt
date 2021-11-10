@@ -424,9 +424,6 @@ C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\runtimes\win\
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.csprojAssemblyReference.cache
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.AssemblyInfoInputs.cache
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.AssemblyInfo.cs
-C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.csproj.CoreCompileInputs.cache
-C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.RazorAssemblyInfo.cache
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.RazorAssemblyInfo.cs
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.TagHelpers.input.cache
@@ -473,3 +470,14 @@ C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\Razor\Areas\I
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.Cvsoft - Web Deploy.json
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Cvsoft - Web Deploy\mssql1.arm.json
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Cvsoft - Web Deploy\mssql2.arm.json
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Cvsoft - Web Deploy\profile.arm.json
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Azure.Identity.dll
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.MvcApplicationPartsAssemblyInfo.cache
