@@ -3,4 +3,10 @@
   <parameter name="IIS Web Application Name" description="" value="Cvsoft" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\HP\\source\\repos\\CeeveeSoftWebProj\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
   </parameter>
+  <parameter name="CeeveeSoftWebProj.Data.ApplicationDbContext" description="" value="Server=(localdb)\mssqllocaldb;Database=aspnet-CeeveeSoftWebProj-B2E94784-A10A-4EA0-AFD7-CDBCC76DF0B9;Trusted_Connection=True;MultipleActiveResultSets=true" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\HP\\source\\repos\\CeeveeSoftWebProj\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\CeeveeSoftWebProj\.Data\.ApplicationDbContext\.sql$" />
+  </parameter>
+  <parameter name="CeeveeSoftWebProj.Data.CeeveeSoftWebProjContext" description="" value="Server=(localdb)\mssqllocaldb;Database=CeeveeSoftWebProj;Trusted_Connection=True;MultipleActiveResultSets=true" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\HP\\source\\repos\\CeeveeSoftWebProj\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\CeeveeSoftWebProj\.Data\.CeeveeSoftWebProjContext\.sql$" />
+  </parameter>
 </parameters>

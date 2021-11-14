@@ -481,3 +481,4 @@ C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Azure.Core.
 C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
 C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Azure.Identity.dll
 C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\Cvsoft - Web Deploy\secrets1.arm.json

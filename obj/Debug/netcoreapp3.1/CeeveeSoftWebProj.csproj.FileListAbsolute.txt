@@ -481,3 +481,4 @@ C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Azure.Securit
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Debug\netcoreapp3.1\CeeveeSoftWebProj.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Cvsoft - Web Deploy\secrets1.arm.json

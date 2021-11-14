@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-11-12T04:15:44.1665669Z"
+    },
     "mssql2": {
       "restored": true,
       "restoreTime": "2021-11-10T05:53:32.3834938Z"
@@ -18,6 +22,10 @@
       "Type": "resourceGroup",
       "Value": "azureproj"
     },
+    "secrets1.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "azureproj"
+    },
     "mssql1.subscriptionId": {
       "Type": "subscription",
       "Value": "ba752823-6c81-4fed-bab9-29df8b5b1697"
@@ -25,6 +33,10 @@
     "mssql1.resourceGroupName": {
       "Type": "resourceGroup",
       "Value": "azureproj"
+    },
+    "secrets1.subscriptionId": {
+      "Type": "subscription",
+      "Value": "ba752823-6c81-4fed-bab9-29df8b5b1697"
     }
   }
 }
