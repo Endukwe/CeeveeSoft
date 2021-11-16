@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CeeveeSoftWebProj.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211018093555_migratn")]
-    partial class migratn
+    [Migration("20211116172439_Initialcre-IgnoreChanges")]
+    partial class InitialcreIgnoreChanges
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,14 +28,22 @@ namespace CeeveeSoftWebProj.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Date")
+                    b.Property<int>("ClassOfDegree")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Course")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EduContent")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("PortfolioId")
                         .HasColumnType("int");
+
+                    b.Property<string>("School")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EducationId");
 
@@ -52,14 +60,25 @@ namespace CeeveeSoftWebProj.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ExpContent")
+                    b.Property<string>("Organization")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PortfolioId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleFunction")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ExperienceId");
 
@@ -80,6 +99,9 @@ namespace CeeveeSoftWebProj.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<byte[]>("CV")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<string>("EmailAddress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -88,6 +110,9 @@ namespace CeeveeSoftWebProj.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(20)")
                         .HasMaxLength(20);
+
+                    b.Property<string>("IdentityId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -103,6 +128,10 @@ namespace CeeveeSoftWebProj.Migrations
 
                     b.Property<string>("ProfessionalSummary")
                         .IsRequired()
+                        .HasColumnType("nvarchar(400)")
+                        .HasMaxLength(400);
+
+                    b.Property<string>("Proffesion")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("ProfilePicture")
@@ -125,6 +154,7 @@ namespace CeeveeSoftWebProj.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("SkillContent")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SkillId");

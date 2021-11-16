@@ -19,8 +19,8 @@ namespace CeeveeSoftWebProj.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("CeeveeSoftWebProjContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<CeeveeSoftWebProjContext>();
+                //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                  //  .AddEntityFrameworkStores<CeeveeSoftWebProjContext>();
             });
         }
     }

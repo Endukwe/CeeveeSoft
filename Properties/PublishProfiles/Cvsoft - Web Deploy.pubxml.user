@@ -9,19 +9,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARmh20wEtAUSgJEHclGKbqgAAAAACAAAAAAAQZgAAAAEAACAAAAByOkU1lu3vJhUHhLvdLi6IMNUovuxg4U778w2e4JondwAAAAAOgAAAAAIAACAAAAAX2rgoXTCAtvSFRco+ppe5AIcf/KoLGGREg1SaDfwEDoAAAACEqRQNbfKb3oJEleJe0GbYmV35LpeD6nKOc+BxYcx0qAqp7l2vPExcMxErCeEbRopiC0im2zNy6Sra/Gm4cucZy/iNkVNYnXQtxwtxWo2FFC3OWV8V3mzrMGFLvRX2GCQPSsc2LX4L+PDMnjMq/89cO84yeWvYT9exkf33meQmzUAAAAD0FEDEMF171e914SkD+I7r3E2g/g/EX5nWyu/T3+Twcg1sU9IzfyVLVuTiGMpN3gSIxkVOOE+2CmgX7Cfysodl</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
-    <DestinationConnectionStrings Include="CeeveeSoftWebProjContextConnection">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=CeeveeSoftWebProj%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
-    </DestinationConnectionStrings>
     <DestinationConnectionStrings Include="DefaultConnection">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=aspnet-CeeveeSoftWebProj-B2E94784-A10A-4EA0-AFD7-CDBCC76DF0B9%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+      <Value>Server=tcp:ceeveesoftwebprojdbserver.database.windows.net,1433%3bInitial Catalog=CeeveeSoftWebProj_db%3bPersist Security Info=False%3bUser ID=ENDUKWE%3bPassword=Chuksel95%40%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
   <ItemGroup>
     <EFMigrations Include="CeeveeSoftWebProj.Data.ApplicationDbContext">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=aspnet-CeeveeSoftWebProj-B2E94784-A10A-4EA0-AFD7-CDBCC76DF0B9%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
-    </EFMigrations>
-    <EFMigrations Include="CeeveeSoftWebProj.Data.CeeveeSoftWebProjContext">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=CeeveeSoftWebProj%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+      <Value>Server=tcp:ceeveesoftwebprojdbserver.database.windows.net,1433%3bInitial Catalog=CeeveeSoftWebProj_db%3bPersist Security Info=False%3bUser ID=ENDUKWE%3bPassword=Chuksel95%40%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
     </EFMigrations>
   </ItemGroup>
 </Project>

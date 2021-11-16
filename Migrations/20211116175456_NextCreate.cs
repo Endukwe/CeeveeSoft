@@ -1,9 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
 namespace CeeveeSoftWebProj.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class NextCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -57,9 +57,12 @@ namespace CeeveeSoftWebProj.Migrations
                     ProfilePicture = table.Column<byte[]>(nullable: false),
                     EmailAddress = table.Column<string>(nullable: false),
                     PhoneNumber = table.Column<string>(nullable: false),
-                    ProfessionalSummary = table.Column<string>(nullable: false),
+                    ProfessionalSummary = table.Column<string>(maxLength: 400, nullable: false),
                     Address = table.Column<string>(nullable: false),
-                    LinkdinHandle = table.Column<string>(nullable: true)
+                    LinkdinHandle = table.Column<string>(nullable: true),
+                    Proffesion = table.Column<string>(nullable: true),
+                    CV = table.Column<byte[]>(nullable: true),
+                    IdentityId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -180,7 +183,9 @@ namespace CeeveeSoftWebProj.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PortfolioId = table.Column<int>(nullable: false),
                     Date = table.Column<DateTime>(nullable: false),
-                    EduContent = table.Column<string>(nullable: true)
+                    School = table.Column<string>(nullable: false),
+                    Course = table.Column<string>(nullable: false),
+                    ClassOfDegree = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -200,8 +205,11 @@ namespace CeeveeSoftWebProj.Migrations
                     ExperienceId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PortfolioId = table.Column<int>(nullable: false),
-                    Date = table.Column<DateTime>(nullable: false),
-                    ExpContent = table.Column<string>(nullable: true)
+                    StartDate = table.Column<DateTime>(nullable: false),
+                    EndDate = table.Column<DateTime>(nullable: true),
+                    Organization = table.Column<string>(nullable: false),
+                    RoleFunction = table.Column<string>(nullable: true),
+                    Role = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -221,7 +229,7 @@ namespace CeeveeSoftWebProj.Migrations
                     SkillId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PortfolioId = table.Column<int>(nullable: false),
-                    SkillContent = table.Column<string>(nullable: true)
+                    SkillContent = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -276,53 +284,25 @@ namespace CeeveeSoftWebProj.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Educations_PortfolioId",
                 table: "Educations",
-                column: "PortfolioId");
+                column: "PortfolioId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Experiences_PortfolioId",
                 table: "Experiences",
-                column: "PortfolioId");
+                column: "PortfolioId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Skills_PortfolioId",
                 table: "Skills",
-                column: "PortfolioId");
+                column: "PortfolioId",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "AspNetRoleClaims");
 
-            migrationBuilder.DropTable(
-                name: "AspNetUserClaims");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUserLogins");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUserRoles");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "Educations");
-
-            migrationBuilder.DropTable(
-                name: "Experiences");
-
-            migrationBuilder.DropTable(
-                name: "Skills");
-
-            migrationBuilder.DropTable(
-                name: "AspNetRoles");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Portfolios");
         }
     }
 }

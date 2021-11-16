@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CeeveeSoftWebProj.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211107100535_ExperienceModelUpdt")]
-    partial class ExperienceModelUpdt
+    [Migration("20211116175456_NextCreate")]
+    partial class NextCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
