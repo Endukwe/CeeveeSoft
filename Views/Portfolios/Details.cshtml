@@ -4,10 +4,14 @@
     ViewData["Title"] = "Details";
 }
 
-<div class="container-fluid bg-white">
-    <h1>Details</h1>
 
-    <div class="mx-auto card border-primary text-center bg-white text-dark" style="width:50rem">
+    <div class="card-body text-white bg-secondary mt-0">
+        <h3> Good Job @Model.FirstName! </h3>
+
+        <p><b>Your page is ready to be viewed and shared</b></p>
+        <p>You can edit the contents, view your deployed page or copy the Url from the links below</p>
+    </div>
+    <div class="card-body ">
 
         <div class="row justify-content-center">
             <div class="col">
@@ -91,7 +95,7 @@
                         <h3> Education</h3>
                     </header>
                     <p>@Model.Educations.ClassOfDegree @Model.Educations.Course (@Model.Educations.Date.ToString("yyyy"))</p>
-                   
+
                 </section>
             </div>
         </div>
@@ -119,18 +123,18 @@
             </div>
         </div>
         <div>
-            <a asp-action="edit" asp-route-id="@Model.Id" class="btn btn-primary" role="button"> Edit Portfolio</a>
-            <a asp-action="Index" asp-route-id="@Model.Id" class="btn btn-primary" role="button"> View Portfolio</a>
+            <a asp-action="edit" asp-route-id="@Model.Id" class="btn btn-danger" role="button"> Edit Portfolio</a>
+            <a asp-action="Index" asp-route-id="@Model.Id" class="btn btn-success" role="button"> View Your Completed page</a>
         </div>
         <br />
-        <div>
-            <input type="url" value="@ViewBag.url" id="myinput"/>
-            
-            <button onclick="myfunction" value="@ViewBag.url" id="myinput" class="btn btn-primary" role="button">Copy your CV URL</button>
+        @*<div>
+            <article id="contentbtn"> @ViewBag.url</article>
+            <button class="btn-primary" id="btncopy" >Click to copy your page URL</button>
 
-        </div>
+        </div>*@
     </div>
-</div>
+   
+
 
 
 

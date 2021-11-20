@@ -31,8 +31,8 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid p-3 mb-2 bg-light text-dark ");
-        height: auto">
+    <div class="container-fluid p-3 mb-2 bg-light text-dark " );
+         height: auto">
         <main role="main" class="pb-3 bg-light">
             @RenderBody()
         </main>
@@ -44,8 +44,28 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/copylink.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @RenderSection("Scripts", required: false)
+    <script>
+
+
+        const copyButton = document.getElementById('btncopy');
+        copyButton.addEventListener('click', async (event) => {
+            const content = document.getElementById('contentbtn').nodeValue;
+            if (content == null) {
+                console.log('content empty')
+            }
+
+            await navigator.clipboard.writeText(content);
+
+
+            //const copied = await navigator.clipboard.readText();
+            //console.log(copied);
+        })
+    </script>
+
 </body>
 </html>
