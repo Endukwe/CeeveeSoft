@@ -5,138 +5,256 @@
 }
 
 
-    <div class="card-body text-white bg-secondary mt-0">
-        <h3> Good Job @Model.FirstName! </h3>
+<div class="card-body text-white bg-secondary mt-0">
+    <h3> Good Job @Model.FirstName! </h3>
 
-        <p><b>Your page is ready to be viewed and shared</b></p>
-        <p>You can edit the contents, view your deployed page or copy the Url from the links below</p>
-    </div>
-    <div class="card-body ">
+    <p><b>Your page is ready to be viewed and shared</b></p>
+    <p>You can edit the contents, view your deployed page or copy the Url from the links below</p>
+</div>
+<div class="container-fluid">
+    <div class="card">
 
-        <div class="row justify-content-center">
-            <div class="col">
+        <div class="col-md-auto">
+
+            <div class="card-body ">
+
+                <h3> Basic Informations</h3>
+
                 <img src="@ViewBag.Profilepics" height="240" width="240" />
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3>Name</h3>
-                    </header>
-                    <p>@Model.FullName</p>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3>Email</h3>
-                    </header>
-                    <p>@Model.EmailAddress</p>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3>Phone Number</h3>
-                    </header>
-                    <p>@Model.PhoneNumber</p>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3>Address</h3>
-                    </header>
-                    <p>@Model.Address</p>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3>Linkdin Profile</h3>
-                    </header>
-                    <p>@Model.LinkdinHandle</p>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3>Summary</h3>
-                    </header>
-                    <p>@Model.ProfessionalSummary</p>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3> Address</h3>
-                    </header>
-                    <p> @Model.Address</p>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3> Education</h3>
-                    </header>
-                    <p>@Model.Educations.ClassOfDegree @Model.Educations.Course (@Model.Educations.Date.ToString("yyyy"))</p>
 
-                </section>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3> Work Experience</h3>
-                    </header>
-                    <p>@Model.Experiences.Period</p>
-                    <p> @Model.Experiences.Role</p>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <section>
-                    <header>
-                        <h3> Skills</h3>
-                    </header>
-                    <p>@Model.Skills.SkillContent</p>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <section>
+                            <header>
+                                <h3>Name</h3>
+                            </header>
+                            <p>@Model.FullName</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <section>
+                            <header>
+                                <h3>Email</h3>
+                            </header>
+                            <p>@Model.EmailAddress</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <section>
+                            <header>
+                                <h3>Phone Number</h3>
+                            </header>
+                            <p>@Model.PhoneNumber</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <section>
+                            <header>
+                                <h3>Address</h3>
+                            </header>
+                            <p>@Model.Address</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <section>
+                            <header>
+                                <h3>Linkdin Profile</h3>
+                            </header>
+                            <p>@Model.LinkdinHandle</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <section>
+                            <header>
+                                <h3>Summary</h3>
+                            </header>
+                            <p>@Model.ProfessionalSummary</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <section>
+                            <header>
+                                <h3> Address</h3>
+                            </header>
+                            <p> @Model.Address</p>
+                        </section>
+                    </div>
+                </div>
 
-                </section>
             </div>
         </div>
         <div>
-            <a asp-action="edit" asp-route-id="@Model.Id" class="btn btn-danger" role="button"> Edit Portfolio</a>
-            <a asp-action="Index" asp-route-id="@Model.Id" class="btn btn-success" role="button"> View Your Completed page</a>
+            <a asp-action="edit" asp-controller="Portfolios" asp-route-id="@Model.Id" class="btn btn-danger" role="button"> Edit Basic Informations</a>
         </div>
-        <br />
-        @*<div>
-            <article id="contentbtn"> @ViewBag.url</article>
-            <button class="btn-primary" id="btncopy" >Click to copy your page URL</button>
+    </div>
 
-        </div>*@
+    <div class="card">
+        <div class="row">
+            <div class="col-md-auto">
+
+                <div class="card-body ">
+
+                    <header>
+                        <h3> Education</h3>
+                    </header>
+
+                    @foreach (Education education in Model.Educations)
+                    {
+                        <div>
+                            @education.ClassOfDegree   @education.Course,   @education.Date.ToString("yyyy")
+                        </div>
+
+
+                    }
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <a asp-action="edit" asp-controller="Educations" asp-route-id="@Model.Id" class="btn btn-danger" role="button"> Edit Education data</a>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="row">
+            <div class="col-md-auto">
+
+                <div class="card-body ">
+                    <header>
+                        <h3> Work Experience</h3>
+                    </header>
+
+                    @foreach (Experience experience in Model.Experiences)
+                    {
+                        <div>
+                            @experience.Period
+                            <br />
+                            @experience.Role
+                            <br />
+                            @experience.RoleFunction;
+                        </div>
+                        <hr />
+
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <a asp-action="edit" asp-controller="Experiences" asp-route-id="@Model.Id" class="btn btn-danger" role="button"> Edit Experiences</a>
+        </div>
     </div>
    
 
+    <div class="card">
+        <div class="row">
+            <div class="col-md-auto">
+
+                <div class="card-body ">
+
+                    <header>
+                        <h3> Skills</h3>
+                    </header>
+
+                    @foreach (Skill skill in Model.Skills)
+                    {
+                        <div>
+                            @skill.SkillContent;
+                        </div>
+                    }
 
 
 
-    
+
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="edit" asp-controller="Skills" asp-route-id="@Model.Id" class="btn btn-danger" role="button"> Edit Skills</a>
+        </div>
+    </div>
+    @if (Model.Certifications == null)
+    {
+        <div>
+
+        </div>
+    }
+    @if (Model.Certifications != null)
+    {
+        <div class="card">
+            <div class="row">
+                <div class="col-md-auto">
+
+                    <div class="card-body ">
+
+                        <header>
+                            <h3> Certifications</h3>
+                        </header>
+
+                        @foreach (Certification certification in Model.Certifications)
+                        {
+                            <div>
+                                @certification.NameOfCertification;
+                            </div>
+                            <div>
+                                @certification.IssuingBody;
+                            </div>
+                            <div>
+                                @certification.CertificationNo;
+                            </div>
+                            <div>
+                                @certification.IsuueDate;
+                            </div>
+                            <hr />
+                        }
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+    <br />
+    <div>
+
+        <a asp-action="Index" asp-route-id="@Model.Id" class="btn btn-success" role="button"> View Your Completed page</a>
+    </div>
+    <br />
+    <div>
+        <input value="@ViewBag.url" spellcheck="false">
+        <label>Copy the custom URL to your page from the box</label>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
 

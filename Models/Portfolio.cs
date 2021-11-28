@@ -48,14 +48,12 @@ namespace CeeveeSoftWebProj.Models
         public byte[] CV { get; set; }
         public string IdentityId { get; set; }
 
-        public Education Educations { get; set; }
-        public Experience Experiences { get; set; }
-        public Skill Skills { get; set; }
+        public ICollection<Education> Educations { get; set; }
+        public ICollection<Experience> Experiences { get; set; }
+        public ICollection<Certification> Certifications { get; set; }
+        public ICollection<Skill> Skills { get; set; }
 
 
-
-
-        
 
     }
     

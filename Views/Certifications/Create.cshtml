@@ -1,0 +1,49 @@
+﻿@model CeeveeSoftWebProj.Models.Certification
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h4>Add your Certification details</h4>
+
+<div>
+    <a asp-action="Create" asp-controller="Experiences" asp-route-id="@Context.Request.RouteValues["Id"]" class="btn btn-success" role="button">Click to Skip to the next stage</a>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+            <div class="form-group">
+                <label asp-for="NameOfCertification" class="control-label">Name of Certification</label>
+                <input asp-for="NameOfCertification" class="form-control" />
+                <span asp-validation-for="NameOfCertification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IssuingBody" class="control-label"> Issuing Body</label>
+                <input asp-for="IssuingBody" class="form-control" />
+                <span asp-validation-for="IssuingBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CertificationNo" class="control-label">Certification Number</label>
+                <input asp-for="CertificationNo" class="form-control" />
+                <span asp-validation-for="CertificationNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsuueDate" class="control-label">Issue Date</label>
+                <input asp-for="IsuueDate" class="form-control" />
+                <span asp-validation-for="IsuueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save & Continue" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -10,16 +10,45 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CeeveeSoftWebProj.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211116172439_Initialcre-IgnoreChanges")]
-    partial class InitialcreIgnoreChanges
+    [Migration("20211127050216_Reset")]
+    partial class Reset
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.15")
+                .HasAnnotation("ProductVersion", "3.1.21")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("CeeveeSoftWebProj.Models.Certification", b =>
+                {
+                    b.Property<int>("CertificationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CertificationNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IssuingBody")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("IsuueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NameOfCertification")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PortfolioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CertificationId");
+
+                    b.HasIndex("PortfolioId");
+
+                    b.ToTable("Certifications");
+                });
 
             modelBuilder.Entity("CeeveeSoftWebProj.Models.Education", b =>
                 {
@@ -47,8 +76,7 @@ namespace CeeveeSoftWebProj.Migrations
 
                     b.HasKey("EducationId");
 
-                    b.HasIndex("PortfolioId")
-                        .IsUnique();
+                    b.HasIndex("PortfolioId");
 
                     b.ToTable("Educations");
                 });
@@ -82,8 +110,7 @@ namespace CeeveeSoftWebProj.Migrations
 
                     b.HasKey("ExperienceId");
 
-                    b.HasIndex("PortfolioId")
-                        .IsUnique();
+                    b.HasIndex("PortfolioId");
 
                     b.ToTable("Experiences");
                 });
@@ -157,10 +184,12 @@ namespace CeeveeSoftWebProj.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SkillLevel")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("SkillId");
 
-                    b.HasIndex("PortfolioId")
-                        .IsUnique();
+                    b.HasIndex("PortfolioId");
 
                     b.ToTable("Skills");
                 });
@@ -365,11 +394,20 @@ namespace CeeveeSoftWebProj.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("CeeveeSoftWebProj.Models.Certification", b =>
+                {
+                    b.HasOne("CeeveeSoftWebProj.Models.Portfolio", "Portfolio")
+                        .WithMany("Certifications")
+                        .HasForeignKey("PortfolioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("CeeveeSoftWebProj.Models.Education", b =>
                 {
                     b.HasOne("CeeveeSoftWebProj.Models.Portfolio", "portfolio")
-                        .WithOne("Educations")
-                        .HasForeignKey("CeeveeSoftWebProj.Models.Education", "PortfolioId")
+                        .WithMany("Educations")
+                        .HasForeignKey("PortfolioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -377,8 +415,8 @@ namespace CeeveeSoftWebProj.Migrations
             modelBuilder.Entity("CeeveeSoftWebProj.Models.Experience", b =>
                 {
                     b.HasOne("CeeveeSoftWebProj.Models.Portfolio", "portfolio")
-                        .WithOne("Experiences")
-                        .HasForeignKey("CeeveeSoftWebProj.Models.Experience", "PortfolioId")
+                        .WithMany("Experiences")
+                        .HasForeignKey("PortfolioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -386,8 +424,8 @@ namespace CeeveeSoftWebProj.Migrations
             modelBuilder.Entity("CeeveeSoftWebProj.Models.Skill", b =>
                 {
                     b.HasOne("CeeveeSoftWebProj.Models.Portfolio", "portfolio")
-                        .WithOne("Skills")
-                        .HasForeignKey("CeeveeSoftWebProj.Models.Skill", "PortfolioId")
+                        .WithMany("Skills")
+                        .HasForeignKey("PortfolioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

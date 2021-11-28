@@ -41,10 +41,17 @@ namespace CeeveeSoftWebProj.Controllers
             {
                 _context.Add(education);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Create", "Experiences", new { Id = education.PortfolioId });
-                
+                return RedirectToAction("AddEducation", "Educations", new { Id = education.PortfolioId });
+               // return RedirectToAction(nameof(AddEducation));
             }
             
+            
+            
+            return View();
+        }
+
+       public IActionResult AddEducation()
+        {
             return View();
         }
 
@@ -96,7 +103,7 @@ namespace CeeveeSoftWebProj.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Edit","Experience",new { id= education.PortfolioId});
+                return RedirectToAction("Details", "Portfolios", new { id = education.PortfolioId });
             }
             
             return View(education);

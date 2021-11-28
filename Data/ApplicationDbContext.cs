@@ -17,7 +17,8 @@ namespace CeeveeSoftWebProj.Data
         public DbSet<Education> Educations { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Skill> Skills { get; set; }
+        public DbSet<Certification> Certifications { get; set; }
 
-       
+
     }
 }

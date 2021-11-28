@@ -15,6 +15,9 @@ namespace CeeveeSoftWebProj.Models
         [Required]
         [Display(Name = "Skills")]
         public string SkillContent { get; set; }
+        public string Skilllevelpercent { get { return SkillLevel + "%"; } }
+
+        public string SkillLevel { get; set; }
         public Portfolio portfolio { get; set; }
     }
 

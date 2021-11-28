@@ -15,21 +15,21 @@
             <div class="h5 form-group">
                 <label asp-for="FirstName" class="control-label"></label>
                 <input asp-for="FirstName" class="form-control" /> 
-                <small class="text-danger"><i>*First letter in caps lock</i></small>
+                <small class="text-success"><i>*First letter in caps lock</i></small>
                 
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="h5 form-group">
                 <label asp-for="LastName" class="control-label"></label>
                 <input asp-for="LastName" class="form-control" />
-                <small class="text-danger"><i>*First letter in caps lock</i></small>
+                <small class="text-success"><i>*First letter in caps lock</i></small>
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="h5 form-group">
 
                 <label asp-for="Upload" class="control-label"> Upload Picture</label>
                 <input asp-for="Upload" type="file" />
-                <small class="text-danger"><i>*jpeg file format with size less than 2MB</i></small>
+                <small class="text-success"><i>*jpeg file format with size less than 2MB</i></small>
                 <span asp-validation-for="Upload" class="text-danger"></span>
             </div>
             <br />
@@ -37,7 +37,7 @@
 
                 <label asp-for="CVfile" class=" control-label">Upload CV</label>
                 <input asp-for="CVfile" accept=".pdf" type="file" />
-                <small class="text-danger"><i>*PDF format</i></small>
+                <small class="text-success"><i>*PDF format</i></small>
                 <span asp-validation-for="CVfile" class="text-danger"></span>
             </div>
             <div class="h5 form-group">
@@ -64,17 +64,17 @@
             <div class="h5 form-group">
                 <label asp-for="Proffesion" class="h4 control-label"></label>
                 <input asp-for="Proffesion" class="form-control" />
-                <small class="text-danger"><i>*For multiple career focus, seprate with commas. eg "Designer,Photographer,Web Developer"</i></small>
+                <small class="text-success"><i>*For multiple career focus, seprate with commas. eg "Designer,Photographer,Web Developer"</i></small>
                 <span asp-validation-for="Proffesion" class="text-danger"></span>
             </div>
             <div class="h5 form-group">
                 <label asp-for="LinkdinHandle" class="control-label"></label>
                 <input asp-for="LinkdinHandle" class="form-control" />
-                <small class="text-danger"><i>*paste linkdin profile url</i></small>
+                <small class="text-success"><i>*paste linkdin profile url</i></small>
                 <span asp-validation-for="LinkdinHandle" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Continue" class="btn btn-primary" />
+                <input type="submit" value="Save & Continue" class="btn btn-primary" />
             </div>
         </form>
     </div>

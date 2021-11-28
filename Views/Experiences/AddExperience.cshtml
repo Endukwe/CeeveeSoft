@@ -1,0 +1,7 @@
+﻿<div>
+    <h3> Do you want to add another Experience data?</h3>
+    <div>
+        <a asp-action="Create" asp-controller="Experiences" asp-route-id="@Context.Request.RouteValues["Id"]" class="btn btn-primary" role="button"> Yes</a>
+        <a asp-action="Details" asp-controller="Portfolios" asp-route-id="@Context.Request.RouteValues["Id"]" class="btn btn-success" role="button"> No, Continue</a>
+    </div>
+</div>

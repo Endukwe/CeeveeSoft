@@ -36,6 +36,7 @@ namespace CeeveeSoftWebProj.Controllers
                 .Include(i => i.Skills)
                 .Include(i => i.Experiences)
                 .Include(i => i.Educations)
+                .Include(i => i.Certifications)
                 .FirstOrDefaultAsync(m => m.Id == Id);
 
             //Convert profilepicture byte[] to base64string 
@@ -82,6 +83,7 @@ namespace CeeveeSoftWebProj.Controllers
                 .Include(i => i.Skills)
                 .Include(i => i.Experiences)
                 .Include(i => i.Educations)
+                .Include(i => i.Certifications)
                 .FirstOrDefaultAsync(m => m.Id == Id);
             
             //Convert ProfilePicture byte[] to base64string
@@ -92,7 +94,7 @@ namespace CeeveeSoftWebProj.Controllers
             var Lname = portfolio.LastName;
             var LinkId = portfolio.Id.ToString();
             //Link url with format {www.domainname/firstnamelastname/id}
-            var Linkurl = Fname + Lname + "/" + LinkId; //add domain name later
+            var Linkurl = "www.cvsoft.azurewebsites.net" + "/"+ Fname + Lname + "/" + LinkId; //add domain name later
             //Pass Url to viewbag
             ViewBag.url = Linkurl;
 

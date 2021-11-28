@@ -38,11 +38,18 @@ namespace CeeveeSoftWebProj.Controllers
             {
                 _context.Add(experience);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Details", "Portfolios", new { id = experience.PortfolioId });
+                  return RedirectToAction("AddExperience", "Experiences", new { id = experience.PortfolioId });
+               // return RedirectToAction("AddExperience", "Experiences");
             }
 
             return View();
         }
+
+        public IActionResult AddExperience()
+        {
+            return View();
+        }
+
 
         // GET: Experiences/Edit/5
         public async Task<IActionResult> Edit(int? id)

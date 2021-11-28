@@ -1,0 +1,7 @@
+﻿<div>
+    <h3> Do you want to add another Certification?</h3>
+    <div>
+        <a asp-action="Create" asp-controller="Certifications" asp-route-id="@Context.Request.RouteValues["Id"]" class="btn btn-primary" role="button"> Yes</a>
+        <a asp-action="Create" asp-controller="Experiences" asp-route-id="@Context.Request.RouteValues["Id"]" class="btn btn-success" role="button"> No, Move on to the next stage</a>
+    </div>
+</div>

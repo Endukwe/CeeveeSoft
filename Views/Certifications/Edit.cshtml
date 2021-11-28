@@ -1,0 +1,52 @@
+﻿@model CeeveeSoftWebProj.Models.Certification
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Certification</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CertificationId" />
+            <div class="form-group">
+                <label asp-for="PortfolioId" class="control-label"></label>
+                <select asp-for="PortfolioId" class="form-control" asp-items="ViewBag.PortfolioId"></select>
+                <span asp-validation-for="PortfolioId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CertificationNo" class="control-label"></label>
+                <input asp-for="CertificationNo" class="form-control" />
+                <span asp-validation-for="CertificationNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NameOfCertification" class="control-label"></label>
+                <input asp-for="NameOfCertification" class="form-control" />
+                <span asp-validation-for="NameOfCertification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IssuingBody" class="control-label"></label>
+                <input asp-for="IssuingBody" class="form-control" />
+                <span asp-validation-for="IssuingBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsuueDate" class="control-label"></label>
+                <input asp-for="IsuueDate" class="form-control" />
+                <span asp-validation-for="IsuueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -482,3 +482,11 @@ C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Azure.Exten
 C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Azure.Identity.dll
 C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
 C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\Cvsoft - Web Deploy\secrets1.arm.json
+C:\Users\HP\source\repos\CeeveeSoftWebProj\bin\Release\netcoreapp3.1\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\Razor\Views\Certifications\AddCertification.cshtml.g.cs
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\Razor\Views\Certifications\Create.cshtml.g.cs
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\Razor\Views\Certifications\Delete.cshtml.g.cs
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\Razor\Views\Certifications\Edit.cshtml.g.cs
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\Razor\Views\Educations\AddEducation.cshtml.g.cs
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\Razor\Views\Experiences\AddExperience.cshtml.g.cs
+C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\Razor\Views\Skills\AddSkill.cshtml.g.cs

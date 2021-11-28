@@ -14,7 +14,7 @@ namespace CeeveeSoftWebProj.Models
 
         [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:MM-yyyy}")]
+        [DisplayFormat(DataFormatString = "{MM/yyyy}")]
         [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
 

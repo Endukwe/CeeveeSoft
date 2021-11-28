@@ -12,11 +12,17 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
+
             <div class="form-group">
-                <label asp-for="SkillContent" class="control-label"> Skill Set</label>
+                <label asp-for="SkillContent" class="control-label"> Skill</label>
                 <input asp-for="SkillContent" class="form-control" />
-                <small class="text-danger"><i>*The skills listed should be sepersted with commas eg: Javascript, C#, Azure, ASP.NET..... </i></small>
+
+                <span asp-validation-for="SkillContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SkillLevel" class="control-label"> Skill Level (Rate your skill strenght on a scale of 1 - 100)</label>
+                <input asp-for="SkillLevel" class="form-control" />
+
                 <span asp-validation-for="SkillContent" class="text-danger"></span>
             </div>
             <div class="form-group">

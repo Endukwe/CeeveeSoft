@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-using System;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CeeveeSoftWebProj.Migrations
 {
-    public partial class NextCreate : Migration
+    public partial class Reset : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -176,6 +176,29 @@ namespace CeeveeSoftWebProj.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Certifications",
+                columns: table => new
+                {
+                    CertificationId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PortfolioId = table.Column<int>(nullable: false),
+                    CertificationNo = table.Column<string>(nullable: true),
+                    NameOfCertification = table.Column<string>(nullable: true),
+                    IssuingBody = table.Column<string>(nullable: true),
+                    IsuueDate = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Certifications", x => x.CertificationId);
+                    table.ForeignKey(
+                        name: "FK_Certifications_Portfolios_PortfolioId",
+                        column: x => x.PortfolioId,
+                        principalTable: "Portfolios",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Educations",
                 columns: table => new
                 {
@@ -229,7 +252,8 @@ namespace CeeveeSoftWebProj.Migrations
                     SkillId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PortfolioId = table.Column<int>(nullable: false),
-                    SkillContent = table.Column<string>(nullable: false)
+                    SkillContent = table.Column<string>(nullable: false),
+                    SkillLevel = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -282,27 +306,63 @@ namespace CeeveeSoftWebProj.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Certifications_PortfolioId",
+                table: "Certifications",
+                column: "PortfolioId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Educations_PortfolioId",
                 table: "Educations",
-                column: "PortfolioId",
-                unique: true);
+                column: "PortfolioId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Experiences_PortfolioId",
                 table: "Experiences",
-                column: "PortfolioId",
-                unique: true);
+                column: "PortfolioId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Skills_PortfolioId",
                 table: "Skills",
-                column: "PortfolioId",
-                unique: true);
+                column: "PortfolioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "AspNetRoleClaims");
 
+            migrationBuilder.DropTable(
+                name: "AspNetUserClaims");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserLogins");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserRoles");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Certifications");
+
+            migrationBuilder.DropTable(
+                name: "Educations");
+
+            migrationBuilder.DropTable(
+                name: "Experiences");
+
+            migrationBuilder.DropTable(
+                name: "Skills");
+
+            migrationBuilder.DropTable(
+                name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Portfolios");
         }
     }
 }

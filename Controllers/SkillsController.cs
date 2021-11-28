@@ -33,19 +33,23 @@ namespace CeeveeSoftWebProj.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(int Id,[Bind("SkillId,PortfolioId,SkillContent")] Skill skill)
+        public async Task<IActionResult> Create(int Id,[Bind("SkillId,PortfolioId,SkillContent,SkillLevel")] Skill skill)
         {
             skill.PortfolioId = Id;
             if (ModelState.IsValid)
             {
                 _context.Add(skill);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Create", "Educations", new { Id = skill.PortfolioId  });
+                return RedirectToAction("AddSkill", "Skills", new { Id = skill.PortfolioId  });
             }
             
             return View();
         }
 
+        public IActionResult AddSkill()
+        {
+            return View();
+        }
         // GET: Skills/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -94,7 +98,7 @@ namespace CeeveeSoftWebProj.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Edit","Educations", new { id=skill.PortfolioId});
+                return RedirectToAction("Details", "Portfolios", new { id = skill.PortfolioId });
             }
             return View(skill);
         }
