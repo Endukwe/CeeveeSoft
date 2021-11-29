@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CeeveeSoftWebProj.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211127050216_Reset")]
-    partial class Reset
+    [Migration("20211129062148_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

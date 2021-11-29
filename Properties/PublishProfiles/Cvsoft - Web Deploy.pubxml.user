@@ -10,12 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">
-      <Value>Server=tcp:ceeveesoftwebprojdbserver.database.windows.net,1433%3bInitial Catalog=CeeveeSoftWebProj_db%3bPersist Security Info=False%3bUser ID=ENDUKWE%3bPassword=Chuksel95%40%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+      <Value>Data Source=tcp:ceeveesoftwebprojdbserver.database.windows.net,1433%3bInitial Catalog=CeeveeSoftWebProj_db%3bUser Id=ENDUKWE%40ceeveesoftwebprojdbserver%3bPassword=Chuksel95%40</Value>
     </DestinationConnectionStrings>
-  </ItemGroup>
-  <ItemGroup>
-    <EFMigrations Include="CeeveeSoftWebProj.Data.ApplicationDbContext">
-      <Value>Server=tcp:ceeveesoftwebprojdbserver.database.windows.net,1433%3bInitial Catalog=CeeveeSoftWebProj_db%3bPersist Security Info=False%3bUser ID=ENDUKWE%3bPassword=Chuksel95%40%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
-    </EFMigrations>
   </ItemGroup>
 </Project>

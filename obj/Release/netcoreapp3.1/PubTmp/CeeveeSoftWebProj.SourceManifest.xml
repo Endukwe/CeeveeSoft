@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
   <IisApp path="C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\PubTmp\Out\" />
-  <dbfullsql path="C:\Users\HP\source\repos\CeeveeSoftWebProj\obj\Release\netcoreapp3.1\PubTmp\EFSQLScripts\CeeveeSoftWebProj.Data.ApplicationDbContext.sql" />
 </sitemanifest>
